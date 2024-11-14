@@ -8,7 +8,7 @@ import { ArrowRight, BarChart2, Bell, BookOpen, DollarSign, Lock, PieChart, Shie
 import { useRouter } from 'next/navigation'
 export default function Home() {
   const router = useRouter()
-  const handleButtonClick=()=>{
+  const handleButtonClick = () => {
     console.log("hello")
     router.push("/auth/register")
   }
@@ -32,20 +32,20 @@ export default function Home() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-12 md:pt-32 md:pb-24">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
+            <div className="flex flex-col items-center space-y-10 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <h1 className="px-5 mb-10 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Master Your Finances with AI-Powered Insights
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="mb-10 mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
                   Take control of your financial future with our intelligent budget tracking and personalized recommendations.
                 </p>
               </div>
               <div className="space-x-4">
-                <Button onClickCapture={handleButtonClick}>Get Started</Button>
-                <Button variant="outline">Learn More</Button>
+                <Button className='text-2xl' onClickCapture={handleButtonClick}>Get Started</Button>
+                <Button className='text-2xl' variant="outline">Learn More</Button>
               </div>
             </div>
           </div>
@@ -111,11 +111,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+
+        <section className="w-full py-12 md:py-24 lg:py-32 max-w-[425px] sm:max-w-full">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Your Personal Financial Assistant</h2>
+              <div className="space-y-4 ml-4 sm:ml-8">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl flex-wrap">Your Personal Financial Assistant</h2>
                 <p className="text-gray-500 dark:text-gray-400">
                   Our AI-powered platform provides personalized insights, automates expense tracking, and helps you make
                   informed financial decisions. Take control of your money and achieve your financial goals with ease.
@@ -135,7 +136,7 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center max-w-[400px] sm:max-w-[550px]">
                 <Image
                   alt="Dashboard preview"
                   className="aspect-video overflow-hidden rounded-xl object-cover object-center"
@@ -147,6 +148,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">What Our Users Say</h2>
